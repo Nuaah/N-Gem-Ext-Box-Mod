@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east":  {
+      "model": "ngemextboxmod:block/gemstone_workbench",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "ngemextboxmod:block/gemstone_workbench"
+    },
+    "facing=south": {
+      "model": "ngemextboxmod:block/gemstone_workbench",
+      "y": 180
+    },
+    "facing=west":  {
+      "model": "ngemextboxmod:block/gemstone_workbench",
+      "y": 270
+    }
+  }
+}

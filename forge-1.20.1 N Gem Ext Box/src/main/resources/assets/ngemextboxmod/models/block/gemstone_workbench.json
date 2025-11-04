@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "minecraft:block/oak_planks",
+    "east": "ngemextboxmod:block/gemstone_workbench_right",
+    "north": "ngemextboxmod:block/gemstone_workbench_front",
+    "particle": "ngemextboxmod:block/gemstone_workbench_front",
+    "south": "ngemextboxmod:block/gemstone_workbench_back",
+    "up": "ngemextboxmod:block/gemstone_workbench_up",
+    "west": "ngemextboxmod:block/gemstone_workbench_left"
+  }
+}

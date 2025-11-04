@@ -1,0 +1,21 @@
+{
+  "values" : [
+    "ngemextboxmod:aquamarine_ore",
+    "ngemextboxmod:garnet_ore",
+    "ngemextboxmod:moonstone_ore",
+    "ngemextboxmod:peridot_ore",
+    "ngemextboxmod:ruby_ore",
+    "ngemextboxmod:sapphire_ore",
+    "ngemextboxmod:topaz_ore",
+    "ngemextboxmod:tourmaline_ore",
+
+    "ngemextboxmod:deepslate_aquamarine_ore",
+    "ngemextboxmod:deepslate_garnet_ore",
+    "ngemextboxmod:deepslate_moonstone_ore",
+    "ngemextboxmod:deepslate_peridot_ore",
+    "ngemextboxmod:deepslate_ruby_ore",
+    "ngemextboxmod:deepslate_sapphire_ore",
+    "ngemextboxmod:deepslate_topaz_ore",
+    "ngemextboxmod:deepslate_tourmaline_ore"
+  ]
+}

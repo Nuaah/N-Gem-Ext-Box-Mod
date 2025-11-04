@@ -1,0 +1,60 @@
+{
+  "itemGroup.NGemExtBoxMain" : "N Gem Ext Box Mod",
+
+  "item.ngemextboxmod.ruby_gem" : "ルビー",
+  "item.ngemextboxmod.aquamarine_gem" : "アクアマリン",
+  "item.ngemextboxmod.garnet_gem" : "ガーネット",
+  "item.ngemextboxmod.moonstone_gem" : "ムーンストーン",
+  "item.ngemextboxmod.peridot_gem" : "ペリドット",
+  "item.ngemextboxmod.sapphire_gem" : "サファイア",
+  "item.ngemextboxmod.topaz_gem" : "トパーズ",
+  "item.ngemextboxmod.tourmaline_gem" : "トルマリン",
+
+
+  "block.ngemextboxmod.ruby_ore" : "ルビー鉱石",
+  "block.ngemextboxmod.aquamarine_ore" : "アクアマリン鉱石",
+  "block.ngemextboxmod.garnet_ore" : "ガーネット鉱石",
+  "block.ngemextboxmod.moonstone_ore" : "ムーンストーン鉱石",
+  "block.ngemextboxmod.peridot_ore" : "ペリドット鉱石",
+  "block.ngemextboxmod.sapphire_ore" : "サファイア鉱石",
+  "block.ngemextboxmod.topaz_ore" : "トパーズ鉱石",
+  "block.ngemextboxmod.tourmaline_ore" : "トルマリン鉱石",
+
+  "block.ngemextboxmod.deepslate_ruby_ore" : "深層ルビー鉱石",
+  "block.ngemextboxmod.deepslate_aquamarine_ore" : "深層アクアマリン鉱石",
+  "block.ngemextboxmod.deepslate_garnet_ore" : "深層ガーネット鉱石",
+  "block.ngemextboxmod.deepslate_moonstone_ore" : "深層ムーンストーン鉱石",
+  "block.ngemextboxmod.deepslate_peridot_ore" : "深層ペリドット鉱石",
+  "block.ngemextboxmod.deepslate_sapphire_ore" : "深層サファイア鉱石",
+  "block.ngemextboxmod.deepslate_topaz_ore" : "深層トパーズ鉱石",
+  "block.ngemextboxmod.deepslate_tourmaline_ore" : "深層トルマリン鉱石",
+
+  "block.ngemextboxmod.gemstone_workbench" : "宝石職人の作業台",
+  "container.ngemextboxmod.gemstone_workbench" : "加工スペース",
+  "container.ngemextboxmod.inventory" : "インベントリ",
+
+  "tooltip.ngemextboxmod.ruby_gem" : "ルビー",
+  "tooltip.ngemextboxmod.aquamarine_gem" : "アクアマリン",
+  "tooltip.ngemextboxmod.garnet_gem" : "ガーネット",
+  "tooltip.ngemextboxmod.moonstone_gem" : "ムーンストーン",
+  "tooltip.ngemextboxmod.peridot_gem" : "ペリドット",
+  "tooltip.ngemextboxmod.sapphire_gem" : "サファイア",
+  "tooltip.ngemextboxmod.topaz_gem" : "トパーズ",
+  "tooltip.ngemextboxmod.tourmaline_gem" : "トルマリン",
+
+  "tooltip.desc.ngemextboxmod.ruby_gem" : "火属性",
+  "tooltip.desc.ngemextboxmod.aquamarine_gem" : "水中呼吸",
+  "tooltip.desc.ngemextboxmod.garnet_gem" : "攻撃力",
+  "tooltip.desc.ngemextboxmod.moonstone_gem" : "落下耐性",
+  "tooltip.desc.ngemextboxmod.peridot_gem" : "移動速度",
+  "tooltip.desc.ngemextboxmod.sapphire_gem" : "火炎耐性",
+  "tooltip.desc.ngemextboxmod.topaz_gem" : "採掘速度",
+  "tooltip.desc.ngemextboxmod.tourmaline_gem" : "水中移動",
+  "tooltip.desc.ngemextboxmod.diamond" : "防御力",
+  "tooltip.desc.ngemextboxmod.emerald" : "再生",
+  "tooltip.desc.ngemextboxmod.lapis_lazuli" : "経験値",
+  "tooltip.desc.ngemextboxmod.amethyst_shard" : "毒",
+
+  "tooltip.desc.ngemextboxmod.combine.effect" : "埋め込み効果",
+  "tooltip.desc.ngemextboxmod.combine.gem" : "埋め込み宝石"
+}

@@ -1,0 +1,23 @@
+{
+  "type": "ngemextboxmod:random_add_items",
+  "items": [
+    "ngemextboxmod:ruby_gem",
+    "ngemextboxmod:aquamarine_gem",
+    "ngemextboxmod:garnet_gem",
+    "ngemextboxmod:moonstone_gem",
+    "ngemextboxmod:peridot_gem",
+    "ngemextboxmod:sapphire_gem" ,
+    "ngemextboxmod:topaz_gem",
+    "ngemextboxmod:tourmaline_gem"
+  ],
+  "conditions": [
+    {
+      "condition": "forge:loot_table_id",
+      "loot_table_id": "minecraft:chests/abandoned_mineshaft"
+    },
+    {
+      "condition": "minecraft:random_chance",
+      "chance": 0.25
+    }
+  ]
+}

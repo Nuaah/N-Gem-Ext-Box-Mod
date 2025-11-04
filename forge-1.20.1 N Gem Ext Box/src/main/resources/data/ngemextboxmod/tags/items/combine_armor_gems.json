@@ -1,0 +1,11 @@
+{
+  "values" : [
+    "minecraft:diamond",
+    "minecraft:emerald",
+    "ngemextboxmod:aquamarine_gem",
+    "ngemextboxmod:moonstone_gem",
+    "ngemextboxmod:peridot_gem",
+    "ngemextboxmod:sapphire_gem" ,
+    "ngemextboxmod:tourmaline_gem"
+  ]
+}

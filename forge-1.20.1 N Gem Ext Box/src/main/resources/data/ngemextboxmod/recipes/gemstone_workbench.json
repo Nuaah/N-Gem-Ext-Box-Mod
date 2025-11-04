@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "tag": "minecraft:planks"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "*": {
+      "item" : "minecraft:crafting_table"
+    }
+  },
+  "pattern": [
+    "III",
+    "#*#",
+    "###"
+  ],
+  "result": {
+    "item": "ngemextboxmod:gemstone_workbench"
+  },
+  "show_notification": true
+}
