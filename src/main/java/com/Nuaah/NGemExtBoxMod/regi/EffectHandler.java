@@ -36,10 +36,10 @@ import java.util.UUID;
 @Mod.EventBusSubscriber(modid = NGemExtBoxMod.MOD_ID)
 public class EffectHandler {
 
-    private static final UUID GEM_DEFENSE_ARMOR_UUID = UUID.fromString("11111111-1111-1111-1111-111111111111");
-    private static final UUID GEM_DAMAGE_BONUS_UUID = UUID.fromString("22222222-2222-2222-2222-222222222222");
-    private static final UUID GEM_SPEED_BONUS_UUID = UUID.fromString("33333333-3333-3333-3333-333333333333");
-    private static final UUID GEM_WATERSPEED_BONUS_UUID = UUID.fromString("44444444-4444-4444-4444-444444444444");
+    private static final UUID GEM_DEFENSE_ARMOR_UUID = UUID.fromString("9b58f60f-b4e1-47f0-90f6-b83fdd2f9cda");
+    private static final UUID GEM_DAMAGE_BONUS_UUID = UUID.fromString("d23709b8-6f76-4dc6-b3a1-6c5cec7e9d5b");
+    private static final UUID GEM_SPEED_BONUS_UUID = UUID.fromString("a049b884-7a69-4a07-a619-4e4a301b8303");
+    private static final UUID GEM_WATERSPEED_BONUS_UUID = UUID.fromString("ae321664-b90a-49d2-a14e-e99d66fd4cfa");
 
     @SubscribeEvent
     public static void onAttributeModify(ItemAttributeModifierEvent event) {
