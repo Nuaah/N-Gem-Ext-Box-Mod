@@ -68,35 +68,42 @@ public class EffectHandler {
 
             Collections.shuffle(gems);
 
+
+
+
             tredes.get(1).add((trader, rand) -> {
-                int emeraldCost = 3 + random.nextInt(3); // 2〜5エメラルド
+                int randomIndex = rand.nextInt(gems.size());
+                int emeraldCost = 3 + rand.nextInt(0,3);
                 return new MerchantOffer(
                     new ItemStack(Items.EMERALD, emeraldCost),
-                    gems.get(0).copy(),
+                    gems.get(randomIndex).copy(),
                     5, 5, 0.05F
                 );
             });
 
             tredes.get(1).add((trader, rand) -> {
-                int emeraldCost = 3 + random.nextInt(3); // 2〜5エメラルド
+                int randomIndex = rand.nextInt(gems.size());
+                int emeraldCost = 3 + rand.nextInt(0,3);
                 return new MerchantOffer(
                         new ItemStack(Items.EMERALD, emeraldCost),
-                        gems.get(1).copy(),
+                        gems.get(randomIndex).copy(),
                         5, 5, 0.05F
                 );
             });
 
             tredes.get(1).add((trader, rand) -> {
-                int emeraldCost = 3 + random.nextInt(3); // 2〜5エメラルド
+                int randomIndex = rand.nextInt(gems.size());
+                int emeraldCost = 3 + rand.nextInt(0,3);
                 return new MerchantOffer(
                         new ItemStack(Items.EMERALD, emeraldCost),
-                        gems.get(2).copy(),
+                        gems.get(randomIndex).copy(),
                         5, 5, 0.05F
                 );
             });
 
             tredes.get(2).add((trader, rand) -> {
-                int emeraldCost = 1 + random.nextInt(3); //
+                int randomIndex = rand.nextInt(gems.size());
+                int emeraldCost = 1 + rand.nextInt(0,3);
                 return new MerchantOffer(
                         new ItemStack(Items.EMERALD, emeraldCost),
                         new ItemStack(NGemExtBoxModBlocks.Blocks.GEODE.get()),
@@ -105,46 +112,51 @@ public class EffectHandler {
             });
 
             tredes.get(2).add((trader, rand) -> {
-                int emeraldCost = 1 + random.nextInt(3); //
+                int randomIndex = rand.nextInt(gems.size());
+                int emeraldCost = 1 + rand.nextInt(0,3);
                 return new MerchantOffer(
-                        gems.get(3).copy(),
+                        gems.get(randomIndex).copy(),
                         new ItemStack(Items.EMERALD, emeraldCost),
                         6, 5, 0.05F
                 );
             });
 
             tredes.get(2).add((trader, rand) -> {
-                int emeraldCost = 3 + random.nextInt(3); //
+                int randomIndex = rand.nextInt(gems.size());
+                int emeraldCost = 3 + rand.nextInt(0,3);
                 return new MerchantOffer(
                         new ItemStack(Items.EMERALD, emeraldCost),
-                        gems.get(2).copy(),
+                        gems.get(randomIndex).copy(),
                         7, 5, 0.05F
                 );
             });
 
             tredes.get(3).add((trader, rand) -> {
-                int tradeCount = 1 + random.nextInt(3); //
+                int randomIndex = rand.nextInt(gems.size());
+                int tradeCount = 1 + rand.nextInt(0,3);
                 return new MerchantOffer(
                         new ItemStack(gems.get(3).getItem(),tradeCount),
-                        gems.get(4).copy(),
+                        gems.get(randomIndex).copy(),
                         10, 5, 0.05F
                 );
             });
 
             tredes.get(3).add((trader, rand) -> {
-                int tradeCount = 1 + random.nextInt(3); //
+                int randomIndex = rand.nextInt(gems.size());
+                int tradeCount = 1 + rand.nextInt(0,3);
                 return new MerchantOffer(
                         new ItemStack(gems.get(3).getItem(),tradeCount),
-                        gems.get(5).copy(),
+                        gems.get(randomIndex).copy(),
                         10, 5, 0.05F
                 );
             });
 
             tredes.get(4).add((trader, rand) -> {
-                int emeraldCost = 2 + random.nextInt(2); // 2〜4エメラルド
+                int randomIndex = rand.nextInt(gems.size());
+                int emeraldCost = 2 + rand.nextInt(0,2);
                 return new MerchantOffer(
                         new ItemStack(Items.EMERALD, emeraldCost),
-                        gems.get(6).copy(),
+                        gems.get(randomIndex).copy(),
                         5, 5, 0.05F
                 );
             });
@@ -232,19 +244,21 @@ public class EffectHandler {
         });
     }
 
-    public static int air = 300;
-    public static boolean inWater = false;
+//    public static int air = 300;
+//    public static boolean inWater = false;
 
     @SubscribeEvent
     public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
         Player player = event.player;
 
-        if(!player.isEyeInFluid(FluidTags.WATER)){ //水中か判定
-            inWater = false;
-            air = player.getAirSupply(); //呼吸リセット
-        } else {
-            inWater = true;
-        }
+        boolean isEyeInWater = player.isEyeInFluid(FluidTags.WATER);
+
+//        if(!player.isEyeInFluid(FluidTags.WATER)){ //水中か判定
+//            inWater = false;
+//            air = player.getAirSupply(); //呼吸リセット
+//        } else {
+//            inWater = true;
+//        }
 
         int[] bonusAir = {0};
         int[] bonusHeal = {0};
@@ -259,8 +273,8 @@ public class EffectHandler {
 
                     String id = gem.getItem().toString();
 
-                    if (inWater) {
-                        if (id.contains("aquamarine")) bonusAir[0] += 5; //水中呼吸
+                    if (isEyeInWater) {
+                        if (id.contains("aquamarine")) bonusAir[0] += 3; //水中呼吸
                     }
 
                     if(player.isInWater()){
@@ -275,13 +289,23 @@ public class EffectHandler {
         }
 
         //水中呼吸
-        ForgeRegistries.FLUIDS.tags();
-        if (bonusAir[0] > 0) {
-            // 通常は毎tickごとに減少する（例：20tick = 1秒）
-            if (player.tickCount % bonusAir[0] == 0) {
-                air -= 1;
-            }
-            player.setAirSupply(air);
+        // --- 水中呼吸の処理 ---
+
+        if (bonusAir[0] > 0 && isEyeInWater) {
+            player.getCapability(NGemExtBoxModCapabilities.CUSTOM_AIR_CAP).ifPresent(customAir -> {
+                // データを操作
+                long gameTime = player.level().getGameTime();
+                if (gameTime % bonusAir[0] == 0) {
+                    customAir.decreaseAir(1);
+                }
+                int currentCustomAir = customAir.getAir();
+                // マイクラ標準のゲージに反映させる（視覚的表示）
+                player.setAirSupply(currentCustomAir);
+            });
+        } else {
+            player.getCapability(NGemExtBoxModCapabilities.CUSTOM_AIR_CAP).ifPresent(customAir -> {
+               customAir.setAir(player.getAirSupply());
+            });
         }
 
         // 再生

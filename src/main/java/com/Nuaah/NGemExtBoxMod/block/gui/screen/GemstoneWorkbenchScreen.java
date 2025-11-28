@@ -21,7 +21,6 @@ public class GemstoneWorkbenchScreen extends AbstractContainerScreen<GemstoneWor
         this.titleLabelY = 4;
         this.inventoryLabelX = 8;
         this.inventoryLabelY = this.imageHeight - 92;
-
     }
 
     @Override
