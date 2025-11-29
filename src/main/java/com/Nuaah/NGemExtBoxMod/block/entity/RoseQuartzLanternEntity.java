@@ -32,10 +32,10 @@ public class RoseQuartzLanternEntity extends BlockEntity {
         List<Player> players = level.getEntitiesOfClass(Player.class, area);
 
         // 効果を付与（例：再生能力）
-        MobEffectInstance effect = new MobEffectInstance(MobEffects.REGENERATION, 20, 0, false, false);
+        MobEffectInstance effect = new MobEffectInstance(MobEffects.REGENERATION, 100, 0, false, false);
 
         for (Player player : players) {
-            player.addEffect(effect);
+            if (!player.hasEffect(MobEffects.REGENERATION)) player.addEffect(effect);
         }
     }
 }
